@@ -1,0 +1,11 @@
+{
+  "name": "my-pattern-library-project",
+  "version": "0.1.0",
+  "dependencies": {
+    "@frctl/fractal": "^1.0.8",
+    "@frctl/mandelbrot": "^1.0.4"
+  },
+  "scripts": {
+    "start": "fractal start"
+  }
+}

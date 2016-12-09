@@ -1,0 +1,8 @@
+title: "Button title from config.yml with quotes"
+status: "wip"
+preview: "@button-preview"
+context:
+    button-text: "What are you waiting for, huh?!"
+notes: >
+    See documentation section for more info as this is what is listed under
+    the notes section of the config.yml file.

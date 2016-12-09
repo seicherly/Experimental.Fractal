@@ -1,0 +1,6 @@
+title: Example component
+context:
+    example:
+        text: This is an example component!
+        intro: This would be an intro paragraph.
+        cta: Order now!

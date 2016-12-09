@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Layout 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<body>
+
+<header class="sg-header">
+
+</header>
+
+<main class="sg-main">
+{{{ yield }}}
+</main>
+
+<footer class="sg-footer">
+    &copy; 2016
+</footer>
+
+<script src="{{ path '/components/raw/button/button.js' }}"></script>
+
+{{#each _target.resources.assets}}
+    {{#if isCSS}}
+    <link rel="stylesheet" href="{{ path '/components/raw/{{ _target.baseHandle }}/{{ this.base }}' }}">
+    {{/if}}
+{{/each}}
+
+
+
+<style>
+    .sg-header,
+    .sg-footer {
+        background-color: #aaaa00;
+        height: 100px;
+    }
+
+    @media (min-width: 500px) and (max-width: 960px) {
+        .sg-header,
+        .sg-footer {
+            background-color: #00aaaa;
+        }
+    }
+
+    @media (max-width: 499px) {
+        .sg-header,
+        .sg-footer {
+            background-color: #aa00aa;
+        }
+    }
+</style>
+
+<output id="res"></output>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        window.onresize = printWidth;
+
+        function printWidth() {
+            document.getElementById('res').innerHTML = '<p>Container width: ' + window.innerWidth + 'px</p>';
+        }
+
+        printWidth();
+    });
+</script>
+</body>
+</html>

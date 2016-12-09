@@ -1,0 +1,5 @@
+title: Website layouts title
+status: wip
+context:
+    title: My Website Title from layouts.config
+order: 1
